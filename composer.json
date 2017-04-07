@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Pails\\Finance": "src/Finance"
+      "Pails\\Finance\\": "src/Finance"
     }
   },
   "config": {
