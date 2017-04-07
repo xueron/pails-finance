@@ -85,9 +85,9 @@ class Calc
      * rate=0： (pmt*nper) + pv + fv = 0
      * rate!=0: pv * (1+rate)^nper + pmt(1+rate*type)*[((1+rate)^nper -1)/rate] + fv = 0
      *
-     * @param $rate
-     * @param $nper
-     * @param $pv
+     * @param     $rate
+     * @param     $nper
+     * @param     $pv
      * @param int $fv
      * @param int $type
      *
@@ -143,7 +143,7 @@ class Calc
         $npv = 0;
         $t = 1;
         foreach ($values as $value) {
-            $pv   = $value / pow(1 + $rate, $t);
+            $pv = $value / pow(1 + $rate, $t);
             $npv += $pv;
             $t++;
         }
@@ -354,8 +354,8 @@ class Calc
             //Aitken 迭代法，高效迭代算法，迭代计算出下一个测试rate
             $rate11 = $pmt * (pow(1 + $rate0, $nper) - 1) / ($absPv * pow(1 + $rate0, $nper));
             $rate12 = $pmt * (pow(1 + $rate11, $nper) - 1) / ($absPv * pow(1 + $rate11, $nper));
-            $rate1  = $rate12 - pow($rate12 - $rate11, 2) / ($rate12 - 2 * $rate11 + $rate0);
-            $rate0  = $rate1;
+            $rate1 = $rate12 - pow($rate12 - $rate11, 2) / ($rate12 - 2 * $rate11 + $rate0);
+            $rate0 = $rate1;
 
             // 代入计算新的npv
             $x++;
@@ -372,10 +372,10 @@ class Calc
     /**
      * 针对初期有额外天数的情况，计算净现值。days应该是小于30天的一个数字。小于30天则将月利按天折算计算。
      *
-     * @param $rate
-     * @param $pv
-     * @param $pmt
-     * @param $nper
+     * @param     $rate
+     * @param     $pv
+     * @param     $pmt
+     * @param     $nper
      * @param int $days
      *
      * @return mixed
