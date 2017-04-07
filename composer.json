@@ -1,0 +1,35 @@
+{
+  "name": "xueron/pails-finance",
+  "type": "library",
+  "description": "Pails Finance is used to perform excel-like financial accounting calculation",
+  "keywords": [
+    "pails",
+    "phalcon",
+    "php",
+    "excel",
+    "finance"
+  ],
+  "homepage": "https://pails.xueron.com",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Xueron Nee",
+      "email": "xueron@xueron.com",
+      "homepage": "https://pails.xueron.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pails\\Finance": "src/Finance"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
